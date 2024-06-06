@@ -57,19 +57,18 @@ const Guard = ({ children }) => {
   // }, [shouldGetProfile, user?.id]);
 
   useEffect(() => {
-    if (shouldGetProfile) {
-      if (user) {
-        const shouldGetRole = !["admin", "teacher", "student"].includes(
-          user.role
-        );
-
-        if (shouldGetRole) {
-          handleError();
-        }
-      } else {
-        handleError();
-      }
-    }
+    // if (shouldGetProfile) {
+    //   if (user) {
+    //     const shouldGetRole = !["admin", "teacher", "student"].includes(
+    //       user.role
+    //     );
+    //     if (shouldGetRole) {
+    //       handleError();
+    //     }
+    //   } else {
+    //     handleError();
+    //   }
+    // }
   }, [shouldGetProfile, user]);
 
   return children;
