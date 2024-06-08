@@ -1,34 +1,50 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 
 import { getUserById } from "./services/UserServices";
 import { useAuth } from "./services/AuthContext";
 
-const { authUser: user, setAuthUser } = useAuth;
+interface GuardProps {
+  children: React.ReactNode;
+}
 
-export const useFetchUserData = () => {
-  const token = localStorage.getItem("jwt");
+type FetchUserData = () => Promise<void>;
 
-  const handleGetUser = async () => {
-    try {
-      const { userId } = jwtDecode(token);
-      const resp = await getUserById(userId);
-      const { data } = resp.payload;
-      setAuthUser(data?.user);
-    } catch (error) {
-      throw error;
-    }
+interface JwtPayload {
+  userId: string;
+}
+export const useFetchUserData = (): FetchUserData => {
+  const { setAuthUser } = useAuth();
+  const token = localStorage.getItem("token");
+
+  const handleGetUser: FetchUserData = async () => {
+    const fetchUserData = async () => {
+      try {
+        if (token !== null) {
+          const decodedToken = jwtDecode<JwtPayload>(token);
+          const resp = await getUserById(decodedToken.userId);
+          const { data } = resp.payload;
+          setAuthUser(data?.user);
+        } else {
+          // Handle the case where token is null
+          throw new Error("Token not found in localStorage");
+        }
+      } catch (error) {
+        throw error;
+      }
+    };
   };
 
   return handleGetUser;
 };
 
-const Guard = ({ children }) => {
+const Guard: React.FC<GuardProps> = ({ children }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const fetchUserData = useFetchUserData();
-  const token = localStorage.getItem("jwt");
+  const token = localStorage.getItem("token");
+  const { authUser: user } = useAuth();
 
   const handleError = () => {
     navigate("/login");
