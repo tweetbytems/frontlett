@@ -1,19 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // Pages
-import Home from "./pages/Home.jsx";
-import Login from "./pages/Login.jsx";
-import SignUp from "./pages/SignUp.jsx";
-import Otp from "./pages/Otp.jsx";
-import ForgotPassword from "./pages/ForgotPassword.jsx";
-import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
-import TermsAndConditions from "./pages/TermsAndConditions.jsx";
-import Error404 from "./pages/Error404.jsx";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Otp from "./pages/Otp";
+import ForgotPassword from "./pages/ForgotPassword";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import Error404 from "./pages/Error404";
 
 // Layouts & User Protected Layout
-import RootLayout from "./layout/RootLayout.jsx";
-import AuthLayout from "./layout/AuthLayout.jsx";
-import GuardLayout from "./layout/GuardLayout.jsx";
+import RootLayout from "./layout/RootLayout";
+import AuthLayout from "./layout/AuthLayout";
+import GuardLayout from "./layout/GuardLayout";
 
 export const router = createBrowserRouter([
   {
