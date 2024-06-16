@@ -6,10 +6,12 @@ import topRight from "../../assets/images/header-pic/topright.png";
 import bottomRight from "../../assets/images/header-pic/bottomright.png";
 import bottomLeft from "../../assets/images/header-pic/bottomleft.png";
 import Button from "../Button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
-    <div className="hero">
+    <section className="hero">
       <MaxWidth className="flex gap-x-16 md:flex-row flex-col md:pt-32 pt-12">
         {/* SUB: TEXT SECTION */}
         <div className="md:w-1/2 text-center md:text-left">
@@ -21,7 +23,11 @@ const Hero = () => {
             Educativ is a platform that helps teachers, students, and parents
             join hands in lifelong learning
           </p>
-          <Button variant="blue" className="px-16 mx-auto md:mx-0">
+          <Button
+            variant="blue"
+            className="px-16 mx-auto md:mx-0"
+            onClick={() => navigate("/login")}
+          >
             Get Started
           </Button>
         </div>
@@ -57,7 +63,7 @@ const Hero = () => {
           />
         </div>
       </MaxWidth>
-    </div>
+    </section>
   );
 };
 

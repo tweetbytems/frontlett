@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
 import Button from "./Button";
@@ -32,6 +32,7 @@ const HEADERLINKS: HeaderLinkTypes[] = [
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     showMenu
@@ -43,10 +44,10 @@ const Header = () => {
     <header className="sticky top-0 z-[200]">
       <nav className="bg-zinc-100 py-4 relative z-[200]">
         <MaxWidth className="flex items-center justify-between">
-          <div className="flex items-center text-blue-700">
+          <Link to="/" className="flex items-center text-blue-700">
             <img src={Logo} alt="logo" className="w-10 h-10" />
             <span className="font-bold text-2xl">ducativ</span>
-          </div>
+          </Link>
 
           <button
             className="md:hidden block"
@@ -70,10 +71,10 @@ const Header = () => {
                 </NavLink>
               </li>
             ))}
-            <Button variant="white" className="">
+            <Button variant="white" onClick={() => navigate("/login")}>
               Log in
             </Button>
-            <Button variant="blue" className="">
+            <Button variant="blue" onClick={() => navigate("/signup")}>
               Sign up
             </Button>
           </ul>
