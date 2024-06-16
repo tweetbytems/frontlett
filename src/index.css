@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+a {
+  @apply text-blue-800 hover:underline underline-offset-4;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.hero {
+  background: #80808015;
+  clip-path: ellipse(100% 55% at 48% 44%);
+  overflow: hidden;
+}

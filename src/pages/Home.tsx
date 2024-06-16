@@ -1,7 +1,12 @@
+import Hero from "../components/pages_component/Hero";
 import React from "react";
 
 const Home = () => {
-  return <div className="text-3xl">Educativ is live</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Home;

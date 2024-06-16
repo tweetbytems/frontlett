@@ -8,7 +8,9 @@ const RootLayout = () => {
   return (
     <>
       <Header />
-      <Outlet />
+      <main className="min-h-[40dvh]">
+        <Outlet />
+      </main>
       <Footer />
     </>
   );
