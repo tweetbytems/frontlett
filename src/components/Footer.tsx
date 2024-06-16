@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
 
           <div className="w-[1px] h-10 bg-white/35" />
-          <p className="text-white font-semibold">
+          <p className="text-white font-semibold text-left">
             SIMPLIFY <br /> MANAGEMENT
           </p>
         </div>
