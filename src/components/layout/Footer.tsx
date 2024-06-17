@@ -1,7 +1,8 @@
-import React from "react";
-import MaxWidth from "./General/MaxWidth";
-import Logo from "../assets/logo/logo.png";
-import Button from "./Button";
+// import React from "react";
+import MaxWidth from "../utils/MaxWidth";
+import Button from "../Button";
+
+import Logo from "../../assets/logo/logo.png";
 
 const FooterLinks = ["Careers", "Privacy Policy", "Terms & Conditions"];
 

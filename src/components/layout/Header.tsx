@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
-import Button from "./Button";
-import Logo from "../assets/logo/logo.png";
-import MaxWidth from "./General/MaxWidth";
+
+import Button from "../Button";
+import MaxWidth from "../utils/MaxWidth";
+
+import Logo from "../../assets/logo/logo.png";
 
 type HeaderLinkTypes = {
   name: string;
@@ -44,7 +46,7 @@ const Header = () => {
     <header className="sticky top-0 z-[200]">
       <nav className="bg-zinc-100 py-4 relative z-[200]">
         <MaxWidth className="flex items-center justify-between">
-          <Link to="/" className="flex items-center text-blue-700">
+          <Link to="/" className="flex items-center text-edu-blue">
             <img src={Logo} alt="logo" className="w-10 h-10" />
             <span className="font-bold text-2xl">ducativ</span>
           </Link>

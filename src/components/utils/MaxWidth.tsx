@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { twMerge } from "tailwind-merge";
 
 const MaxWidth = (props: React.HTMLAttributes<HTMLDivElement>) => {
