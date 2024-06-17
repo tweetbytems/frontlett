@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-          <p>&copy;{new Date().getFullYear()}Class Technologies Inc.</p>
+          <p>&copy;{new Date().getFullYear()} Class Technologies Inc.</p>
         </div>
       </MaxWidth>
     </footer>

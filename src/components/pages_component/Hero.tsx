@@ -19,7 +19,7 @@ const Hero = () => {
             <span className="text-blue-800">Your Gateway to</span> Smart
             Education
           </h1>
-          <p className="w-[85%] my-10 text-lg opacity-65">
+          <p className="w-[85%] my-10 text-lg opacity-65 font-light">
             Educativ is a platform that helps teachers, students, and parents
             join hands in lifelong learning
           </p>
