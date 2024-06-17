@@ -1,12 +1,14 @@
-import React from "react";
-import MaxWidth from "../General/MaxWidth";
+// import React from "react";
+import { useNavigate } from "react-router-dom";
+
+import Button from "../../components/Button";
+
+import MaxWidth from "../../components/utils/MaxWidth";
 import heroGirl from "../../assets/images/herogirl.png";
 import topLeft from "../../assets/images/header-pic/topleft.png";
 import topRight from "../../assets/images/header-pic/topright.png";
 import bottomRight from "../../assets/images/header-pic/bottomright.png";
 import bottomLeft from "../../assets/images/header-pic/bottomleft.png";
-import Button from "../Button";
-import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -15,7 +17,7 @@ const Hero = () => {
       <MaxWidth className="flex gap-x-16 md:flex-row flex-col md:pt-32 pt-12">
         {/* SUB: TEXT SECTION */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="font-semibold md:text-5xl text-4xl [word-spacing:5px] text-amber-300 md:leading-[4rem] leading-[2.5rem]">
+          <h1 className="font-semibold md:text-5xl text-4xl [word-spacing:5px] text-edu-yellow md:leading-[4rem] leading-[2.5rem]">
             <span className="text-blue-800">Your Gateway to</span> Smart
             Education
           </h1>

@@ -1,15 +1,16 @@
-import React from "react";
-import MaxWidth from "../General/MaxWidth";
-import FeaturesCard from "../General/FeaturesCard";
+// import React from "react";
+import { GiBrain } from "react-icons/gi";
+import { TbMapPin2 } from "react-icons/tb";
+import { MdOutlineEditNote } from "react-icons/md";
 import {
   FaCalendarCheck,
   FaChartLine,
   FaFileInvoice,
   FaRegCalendarDays,
 } from "react-icons/fa6";
-import { TbMapPin2 } from "react-icons/tb";
-import { MdOutlineEditNote } from "react-icons/md";
-import { GiBrain } from "react-icons/gi";
+
+import MaxWidth from "../../components/utils/MaxWidth";
+import FeaturesCard from "../../components/cards/FeaturesCard";
 
 const FeaturesData = [
   {
