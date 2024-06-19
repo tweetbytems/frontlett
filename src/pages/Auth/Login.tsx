@@ -1,92 +1,58 @@
+import { Link } from "react-router-dom";
+
 import { Input } from "../../components/thirdparty/input";
 import Button from "../../components/Button";
-
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-
-import {
-  Form as UIForm,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "../../components/thirdparty/form";
-
-const formSchema = z.object({
-  email: z.string().min(2, {
-    message: "email must be at least 2 characters.",
-  }),
-});
+import GoogleButton from "../../components/GoogleButton";
+import MaxWidth from "../../components/layout/MaxWidth";
 
 const Login = () => {
-  const form = useForm({
-    resolver: zodResolver(formSchema),
-  });
-
-  const onSubmit = (data: any) => {
-    console.log(data);
-  };
-
   return (
-    <div className="grid grid-cols-3 h-screen p-0 m-0">
-      <div className="col-span-1 col"></div>
-      <div className="col-span-1 col text-center mt-36 ">
-        <div
-          className="
-        text-edu-blue text-3xl font-semibold
-        "
-        >
-          <h1>
-            Sign in to
-            <span className="text-edu-yellow pl-2">Educativ</span>
-          </h1>
-        </div>
-        <div>
-          <p className=" mx-auto max-w-[60%] text-xs pt-2">
-            To sign in, please, type the email address linked to your educativ
-            account
-          </p>
-        </div>
-        <div
-          className="mt-10 bg-white shadow-lg h-48
-        "
-        >
-          hi
-        </div>
-      </div>
-      <div className="col-span-1 col"></div>
-      <UIForm {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem className="flex flex-col gap-4">
-                <div>
-                  <FormLabel className="font-bold text-lg">Email</FormLabel>
-                  <FormControl>
-                    <Input label="" placeholder="" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </div>
+    <div className="flex flex-col justify-center bg-white sm:shadow-2xl px-6 md:px-12 py-10  space-y-3 md:mt-6 rounded-sm ">
+      <>
+        <h3 className="text-sm">
+          Dont have an account? <Link to="/signup">Sign Up</Link>
+        </h3>
+      </>
 
-                <div>
-                  <FormLabel className="relative font-bold text-lg">
-                    Password
-                  </FormLabel>
-                  <FormControl>
-                    <Input label="" placeholder="" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </div>
-              </FormItem>
-            )}
-          />
-        </form>
-      </UIForm>
+      <GoogleButton onClick={() => {}} />
+
+      <div className="flex items-center justify-between">
+        <svg
+          width="500"
+          height="1"
+          viewBox="0 0 500 1"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line y1="0.5" x2="100%" y2="0.5" stroke="#7E8B9E" />
+        </svg>
+        <span className="mx-2 text-gray-400">or</span>
+        <svg
+          width="500"
+          height="1"
+          viewBox="0 0 500 1"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line y1="0.5" x2="100%" y2="0.5" stroke="#7E8B9E" />
+        </svg>
+      </div>
+
+      <form onSubmit={() => {}} className="flex flex-col space-y-3 ">
+        <Input label="Email" placeholder="" />
+
+        <div>
+          <Input label="Password" placeholder="" type="password" />
+
+          <span className="text-center">
+            <p className="text-sm pt-2">
+              Forgot Password? <Link to="/forgot-password">Reset it</Link>
+            </p>
+          </span>
+        </div>
+
+        <Button variant="blue">Submit</Button>
+      </form>
     </div>
   );
 };

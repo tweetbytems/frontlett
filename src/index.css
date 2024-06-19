@@ -28,8 +28,8 @@
       --destructive: 0 84.2% 60.2%;
       --destructive-foreground: 210 40% 98%;
 
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
+      --border: 240 1% 76%;
+      --input: 240 1% 76%;
       --ring: 222.2 84% 4.9%;
 
       --radius: 0.5rem;
@@ -74,3 +74,17 @@
       @apply bg-background text-foreground;
     }
   }
+
+  a {
+  @apply text-edu-blue  hover:underline underline-offset-4;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.hero {
+  background: #80808015;
+  clip-path: ellipse(100% 55% at 48% 44%);
+  overflow: hidden;
+}

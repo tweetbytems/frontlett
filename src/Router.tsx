@@ -8,9 +8,10 @@ import Error404 from "./pages/Error404";
 
 // Auth
 import Login from "./pages/Auth/Login";
-import SignUp from "./pages/Auth/SignUp";
+import SignUp from "./pages/Auth/SignUp/SignUp";
 import Otp from "./pages/Auth/Otp";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
+import ResetPassword from "./pages/Auth/ResetPassword";
 
 // Layouts & User Protected Layout
 import RootLayout from "./layout/RootLayout";
@@ -39,10 +40,7 @@ export const router = createBrowserRouter([
           },
         ],
       },
-      {
-        path: "/otp",
-        element: <Otp />,
-      },
+
       {
         path: "*",
         element: <Error404 />,
@@ -59,10 +57,17 @@ export const router = createBrowserRouter([
             path: "/signup",
             element: <SignUp />,
           },
-
           {
             path: "/forgot-password",
             element: <ForgotPassword />,
+          },
+          {
+            path: "/reset-password",
+            element: <ResetPassword />,
+          },
+          {
+            path: "/otp",
+            element: <Otp />,
           },
         ],
       },

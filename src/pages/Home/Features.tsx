@@ -9,7 +9,7 @@ import {
   FaRegCalendarDays,
 } from "react-icons/fa6";
 
-import MaxWidth from "../../components/utils/MaxWidth";
+import MaxWidth from "../../components/layout/MaxWidth";
 import FeaturesCard from "../../components/cards/FeaturesCard";
 
 const FeaturesData = [
