@@ -74,7 +74,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 className="absolute right-4 top-4 cursor-pointer text-gray-400"
                 onClick={() => setPasswordVisibility((prev) => !prev)}
               >
-                {visible ? <FaEye /> : <FaEyeSlash />}
+                {Passwordvisibility ? <FaEye /> : <FaEyeSlash />}
               </span>
             </div>
           </motion.div>

@@ -20,7 +20,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center bg-white sm:shadow-2xl px-12 py-10  space-y-3 mt-6 rounded-sm ">
+    <div className="flex flex-col justify-center bg-white sm:shadow-2xl px-12 py-10  space-y-3 mt-6 sm:mx-32 md:mx-0 rounded-sm ">
       <div>
         {step === 1 && (
           <PersonalInformation

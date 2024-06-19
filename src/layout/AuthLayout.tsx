@@ -9,18 +9,11 @@ const AuthLayout = () => {
 
   return (
     <>
-      <div
-        className="md:grid md:grid-cols-8 lg:grid-cols-3
- 
-      "
-      >
+      <div className="md:grid md:grid-cols-8 lg:grid-cols-3">
         <div className="col-span-2 lg:col-span-1"></div>
+
         <div className="col-span-4 lg:col-span-1 my-16 sm:my-12 ">
-          <div
-            className="
-        text-edu-blue text-lg sm:text-3xl md:text-4xl font-bold
-        "
-          >
+          <div className="text-edu-blue text-lg sm:text-4xl  font-bold">
             <h1 className="text-center ">
               {pathname === "/login"
                 ? "Sign In"
@@ -40,6 +33,7 @@ const AuthLayout = () => {
                 : pathname === "/signup"
                 ? " to"
                 : ""}
+
               <span className="text-edu-yellow pl-2">
                 {pathname === "/login"
                   ? "Educativ"
@@ -57,6 +51,7 @@ const AuthLayout = () => {
               </span>
             </h1>
           </div>
+
           <div>
             <p className="mx-auto max-w-[80%] md:max-w-[70%] text-sm pt-2 text-center">
               {pathname === "/login"
@@ -72,8 +67,10 @@ const AuthLayout = () => {
                 : ""}
             </p>
           </div>
+
           <Outlet />
         </div>
+
         <div className="col-span-2 lg:col-span-1"></div>
       </div>
 

@@ -6,7 +6,11 @@ import Button from "../Button";
 
 import Logo from "../../assets/logo/logo.png";
 
-const FooterLinks = ["Careers", "Privacy Policy", "Terms & Conditions"];
+const FooterLinks = [
+  { page: "Careers", link: "/careers" },
+  { page: "Privacy Policy", link: "/privacy-policy" },
+  { page: "Terms & Conditions", link: "/terms-and-conditions" },
+];
 
 const Footer = () => {
   return (
@@ -16,7 +20,7 @@ const Footer = () => {
         <div className="flex items-center justify-center md:gap-10 gap-5">
           <Link
             to="/"
-            className="flex items-center text-blue-700 bg-white rounded-full px-3 hover:no-underline"
+            className="flex items-center bg-white rounded-full px-3 hover:no-underline"
           >
             <img src={Logo} alt="logo" className="w-8 h-8" />
             <span className="font-bold text-xl">ducativ</span>
@@ -45,16 +49,17 @@ const Footer = () => {
 
         {/*SUB: BOTTOM */}
         <div className="text-center">
-          <ul className="flex justify-center mb-4">
-            {FooterLinks.map((link) => (
-              <li
-                key={link}
-                className="border-r md:px-4 px-2 border-white/20 last:border-none last:pr-0"
+          <div className="flex justify-center mb-4">
+            {FooterLinks.map(({ page, link }) => (
+              <Link
+                key={page}
+                to={link}
+                className="border-r md:px-4 px-2  text-white/50  border-white/20 last:border-none last:pr-0"
               >
-                {link}
-              </li>
+                {page}
+              </Link>
             ))}
-          </ul>
+          </div>
           <p>&copy;{new Date().getFullYear()} educativ Technologies Inc.</p>
         </div>
       </MaxWidth>
