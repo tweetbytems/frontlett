@@ -2,7 +2,7 @@ import * as React from "react";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-import { cn } from "../utils/utils";
+import { cn } from "../../utils/utils";
 import { Label } from "./label";
 
 export interface InputProps
