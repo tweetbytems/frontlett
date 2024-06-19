@@ -4,7 +4,7 @@ import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
 
 import Button from "../Button";
-import MaxWidth from "../utils/MaxWidth";
+import MaxWidth from "./MaxWidth";
 
 import Logo from "../../assets/logo/logo.png";
 
@@ -46,7 +46,7 @@ const Header = () => {
     <header className="sticky top-0 z-[200]">
       <nav className="bg-zinc-100 py-4 relative z-[200]">
         <MaxWidth className="flex items-center justify-between">
-          <Link to="/" className="flex items-center text-edu-blue">
+          <Link to="/" className="flex items-center hover:no-underline">
             <img src={Logo} alt="logo" className="w-10 h-10" />
             <span className="font-bold text-2xl">ducativ</span>
           </Link>

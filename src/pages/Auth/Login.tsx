@@ -1,34 +1,58 @@
-import React from "react";
+import { Link } from "react-router-dom";
+
+import { Input } from "../../components/thirdparty/input";
+import Button from "../../components/Button";
+import GoogleButton from "../../components/GoogleButton";
+import MaxWidth from "../../components/layout/MaxWidth";
 
 const Login = () => {
   return (
-    <div className="grid grid-cols-3 h-screen p-0 m-0">
-      <div className="col-span-1 col"></div>
-      <div className="col-span-1 col text-center mt-36 ">
-        <div
-          className="
-        text-edu-blue text-3xl font-semibold
-        "
+    <div className="flex flex-col justify-center bg-white sm:shadow-2xl px-6 md:px-12 py-10  space-y-3 md:mt-6 rounded-sm ">
+      <>
+        <h3 className="text-sm">
+          Dont have an account? <Link to="/signup">Sign Up</Link>
+        </h3>
+      </>
+
+      <GoogleButton onClick={() => {}} />
+
+      <div className="flex items-center justify-between">
+        <svg
+          width="500"
+          height="1"
+          viewBox="0 0 500 1"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <h1>
-            Sign in to
-            <span className="text-edu-yellow pl-2">Educativ</span>
-          </h1>
-        </div>
-        <div>
-          <p className=" mx-auto max-w-[60%] text-xs pt-2">
-            To sign in, please, type the email address linked to your educativ
-            account
-          </p>
-        </div>
-        <div
-          className="mt-10 bg-white shadow-lg
-        "
+          <line y1="0.5" x2="100%" y2="0.5" stroke="#7E8B9E" />
+        </svg>
+        <span className="mx-2 text-gray-400">or</span>
+        <svg
+          width="500"
+          height="1"
+          viewBox="0 0 500 1"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          hi
-        </div>
+          <line y1="0.5" x2="100%" y2="0.5" stroke="#7E8B9E" />
+        </svg>
       </div>
-      <div className="col-span-1 col"></div>
+
+      <form onSubmit={() => {}} className="flex flex-col space-y-3 ">
+        <Input label="Email" placeholder="" />
+
+        <div>
+          <Input label="Password" placeholder="" type="password" />
+
+          <span className="text-center">
+            <p className="text-sm pt-2">
+              Forgot Password? <Link to="/forgot-password">Reset it</Link>
+            </p>
+          </span>
+        </div>
+
+        <Button variant="blue">Submit</Button>
+      </form>
     </div>
   );
 };
