@@ -57,11 +57,11 @@ const AuthLayout = () => {
               {pathname === "/login"
                 ? "To sign in, please, type the email address linked to your educativ account"
                 : pathname === "/signup"
-                ? "Only Primary, Secondary and International schools are expected to sign up!"
+                ? "To sign up, fill in the information below."
                 : pathname === "/forgot-password"
-                ? "Please, enter the email you used in registering your institution!"
+                ? "Input your email address to reset your password"
                 : pathname === "/reset-password"
-                ? `Please, enter the code sent to the ${email}`
+                ? `Input your new password`
                 : pathname === "/otp"
                 ? `Please, enter the 4 digit code sent to the ${email}`
                 : ""}

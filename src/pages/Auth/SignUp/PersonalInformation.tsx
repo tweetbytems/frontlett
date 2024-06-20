@@ -18,7 +18,10 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({
     <div className="flex flex-col justify-center bg-white gap-4 ">
       <>
         <h3 className="text-sm">
-          Already have an account? <Link to="/login">Log In</Link>
+          Already have an account?{" "}
+          <Link className="font-semibold" to="/login">
+            Log In
+          </Link>
         </h3>
       </>
       <GoogleButton onClick={() => {}} />
@@ -56,7 +59,7 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({
         </>
 
         <Button variant="blue" onClick={onNext}>
-          Get Started
+          Next
         </Button>
       </div>
     </div>

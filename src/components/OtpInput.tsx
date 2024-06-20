@@ -35,7 +35,7 @@ const OTPInput = ({ value, onChange }: OTPInputProps) => {
         height: "3rem",
         fontSize: "1.5rem",
         borderRadius: "5px",
-        border: "1px solid #0249B2",
+        border: "1px solid #c2c2c2",
       }}
       // renderSeparator={(props) => <span {...props}> </span>}
       renderInput={(props) => <input {...props} />}
