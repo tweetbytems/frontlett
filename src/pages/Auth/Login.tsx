@@ -10,7 +10,10 @@ const Login = () => {
     <div className="flex flex-col justify-center bg-white sm:shadow-2xl px-6 md:px-12 py-10  space-y-3 md:mt-6 rounded-sm ">
       <>
         <h3 className="text-sm">
-          Dont have an account? <Link to="/signup">Sign Up</Link>
+          Dont have an account?{" "}
+          <Link className="font-semibold" to="/signup">
+            Sign Up
+          </Link>
         </h3>
       </>
 
@@ -46,7 +49,10 @@ const Login = () => {
 
           <span className="text-center">
             <p className="text-sm pt-2">
-              Forgot Password? <Link to="/forgot-password">Reset it</Link>
+              Forgot Password?{" "}
+              <Link className="font-semibold" to="/forgot-password">
+                Reset it
+              </Link>
             </p>
           </span>
         </div>
