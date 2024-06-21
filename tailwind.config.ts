@@ -11,6 +11,9 @@ export default {
         // "edu-yellow-gradient":
         //   "linear-gradient(159.13deg, #0249B2 -24.13%, #602093 132.21%)",
       },
+      fontFamily: {
+        sans: ["Nunito+Sans"],
+      },
     },
   },
   plugins: [],
