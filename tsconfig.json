@@ -23,6 +23,13 @@
 
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/pages/Home/Faq.tsx/Testimonial.jsx",
+    "src/pages/Home/Testimonial.tsx"
+  ],
   "exclude": ["node_modules"]
 }
