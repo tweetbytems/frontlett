@@ -1,9 +1,8 @@
-// import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/Button";
+import MaxWidth from "../../components/layout/MaxWidth";
 
-import MaxWidth from "../../components/utils/MaxWidth";
 import heroGirl from "../../assets/images/herogirl.png";
 import topLeft from "../../assets/images/header-pic/topleft.png";
 import topRight from "../../assets/images/header-pic/topright.png";

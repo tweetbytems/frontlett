@@ -1,10 +1,16 @@
 // import React from "react";
-import MaxWidth from "../utils/MaxWidth";
+import { Link } from "react-router-dom";
+
+import MaxWidth from "./MaxWidth";
 import Button from "../Button";
 
 import Logo from "../../assets/logo/logo.png";
 
-const FooterLinks = ["Careers", "Privacy Policy", "Terms & Conditions"];
+const FooterLinks = [
+  { page: "Careers", link: "/careers" },
+  { page: "Privacy Policy", link: "/privacy-policy" },
+  { page: "Terms & Conditions", link: "/terms-and-conditions" },
+];
 
 const Footer = () => {
   return (
@@ -12,10 +18,13 @@ const Footer = () => {
       <MaxWidth className="max-w-[30rem]">
         {/*SUB:  TOP */}
         <div className="flex items-center justify-center md:gap-10 gap-5">
-          <div className="flex items-center text-blue-700 bg-white rounded-full px-3">
+          <Link
+            to="/"
+            className="flex items-center bg-white rounded-full px-3 hover:no-underline"
+          >
             <img src={Logo} alt="logo" className="w-8 h-8" />
             <span className="font-bold text-xl">ducativ</span>
-          </div>
+          </Link>
 
           <div className="w-[1px] h-10 bg-white/35" />
           <p className="text-white font-semibold text-left">
@@ -25,12 +34,12 @@ const Footer = () => {
         {/*SUB:  MIDDLE */}
         <div className="md:my-20 my-10">
           <p className="font-semibold mb-4">Subscribe to get our Newsletter</p>
-          <div className="flex gap-4">
+          <div className="flex justify-center gap-4 flex-wrap sm:flex-nowrap">
             <input
               type="text"
               placeholder="Your Email"
               name="newNewsletter"
-              className="flex-1 px-4 border border-white/50 rounded-md bg-transparent text-white outline-none"
+              className="flex-1 px-4 border border-white/50 rounded-md bg-transparent text-white outline-none min-h-12"
             />
             <Button variant="blue" className="bg-blue-700 inline-flex ">
               Sign up
@@ -40,17 +49,18 @@ const Footer = () => {
 
         {/*SUB: BOTTOM */}
         <div className="text-center">
-          <ul className="flex justify-center mb-4">
-            {FooterLinks.map((link) => (
-              <li
-                key={link}
-                className="border-r md:px-4 px-2 border-white/20 last:border-none last:pr-0"
+          <div className="flex justify-center mb-4">
+            {FooterLinks.map(({ page, link }) => (
+              <Link
+                key={page}
+                to={link}
+                className="border-r md:px-4 px-2  text-white/50  border-white/20 last:border-none last:pr-0"
               >
-                {link}
-              </li>
+                {page}
+              </Link>
             ))}
-          </ul>
-          <p>&copy;{new Date().getFullYear()} Class Technologies Inc.</p>
+          </div>
+          <p>&copy;{new Date().getFullYear()} educativ Technologies Inc.</p>
         </div>
       </MaxWidth>
     </footer>
