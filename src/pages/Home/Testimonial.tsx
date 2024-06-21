@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import MaxWidth from "../../components/utils/MaxWidth";
 import { Link } from "react-router-dom";
 import TestimonialImage from "../../assets/images/Mask Group.png";
@@ -6,8 +6,17 @@ import TestimonialImage2 from "../../assets/images/herogirl.png";
 import buttonImage from "../../assets/images/Group 51.png";
 import { FaArrowRight } from "react-icons/fa6";
 
-const Testimonial = () => {
-  const TestimonialList = [
+interface TestimonialItem {
+  id: number;
+  image1: string;
+  comment: string;
+  author: string;
+  rating: string;
+  role: string;
+}
+
+const Testimonial: FC = () => {
+  const TestimonialList: TestimonialItem[] = [
     {
       id: 1,
       image1: TestimonialImage,
@@ -28,7 +37,8 @@ const Testimonial = () => {
     },
   ];
 
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] =
+    useState<number>(0);
 
   const handleNext = () => {
     setCurrentTestimonialIndex((prevIndex) =>
@@ -70,7 +80,7 @@ const Testimonial = () => {
             </p>
             <br />
             <div className="mx-auto mb-10 md:mx-0 border-[1px] border-edu-yellow w-[20rem] rounded-[2.5rem]">
-              <Link>
+              <Link to="#">
                 <button className="p-4 text-edu-yellow">
                   Write your assessment{" "}
                 </button>

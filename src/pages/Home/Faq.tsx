@@ -1,8 +1,14 @@
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import MaxWidth from "../../components/utils/MaxWidth";
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 
-const FAQLists = [
+interface FAQ {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+const FAQLists: FAQ[] = [
   {
     id: 1,
     question: "What is Educativ and who can use it?",
@@ -35,10 +41,10 @@ const FAQLists = [
   },
 ];
 
-const Faq = () => {
-  const [activeFaq, setActiveFaq] = useState(null);
+const Faq: FC = () => {
+  const [activeFaq, setActiveFaq] = (useState < number) | (null > null);
 
-  const handleClick = (id) => {
+  const handleClick = (id: number) => {
     setActiveFaq(activeFaq === id ? null : id);
   };
 

@@ -28,8 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/pages/Home/Faq.jsx/Testimonial.jsx",
-    "src/pages/Home/Testimonial.jsx"
+    "src/pages/Home/Faq.tsx/Testimonial.jsx",
+    "src/pages/Home/Testimonial.tsx"
   ],
   "exclude": ["node_modules"]
 }
