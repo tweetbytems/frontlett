@@ -1,10 +1,12 @@
 import React, { useState, FC } from "react";
-import MaxWidth from "../../components/utils/MaxWidth";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa6";
+
+import MaxWidth from "../../components/layout/MaxWidth";
+
 import TestimonialImage from "../../assets/images/Mask Group.png";
 import TestimonialImage2 from "../../assets/images/herogirl.png";
 import buttonImage from "../../assets/images/Group 51.png";
-import { FaArrowRight } from "react-icons/fa6";
 
 interface TestimonialItem {
   id: number;
@@ -50,7 +52,7 @@ const Testimonial: FC = () => {
 
   return (
     <MaxWidth className="w-11/12 mr-60 mb-28">
-      <div className="block md:flex justify-around items-start gap-0 my-20 mb-64">
+      <div className="block md:flex justify-around items-start gap-0 my-20 mb-64 ml-2">
         <div className="w-96 mx-auto md:mx-0">
           <div className="flex justify-center items-center">
             <div className="flex-grow flex justify-center">
@@ -79,20 +81,20 @@ const Testimonial: FC = () => {
               Are you too? Please give your assessment
             </p>
             <br />
-            <div className="mx-auto mb-10 md:mx-0 border-[1px] border-edu-yellow w-[20rem] rounded-[2.5rem]">
+            <div className="mx-auto mb-10 md:mx-0 border-[1px]  border-edu-yellow w-[20rem] rounded-[2.5rem] ">
               <Link to="#">
                 <button className="p-4 text-edu-yellow">
                   Write your assessment{" "}
                 </button>
                 <FaArrowRight
-                  className="ml-7 inline-block text-edu-yellow border-l-[1px]
-               border-l-edu-yellow h-14 w-16 p-4 rounded-[2.5rem]"
+                  className="ml-7 inline-block text-edu-yellow border-[1px] 
+               border-edu-yellow h-14 w-20 p-4 rounded-[2.5rem] animate-bounce-x"
                 />{" "}
               </Link>
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative ">
           <img
             src={selectedTestimonial.image1}
             className="w-80 mx-auto md:mx-0"
@@ -107,7 +109,7 @@ const Testimonial: FC = () => {
           </button>
           <div
             className="border-l-[8px] border-l-[#F67766] bg-[#FFFFFF]
-                text-[#5F5F7E] rounded-md w-[100%] md:w-[120%] shadow-2xl
+                text-[#5F5F7E] rounded-md w-[100%] lg:w-[120%] shadow-2xl
                 top-[71%] left-2
                 md:top-[71%] md:left-[15%] p-4 absolute z-40"
           >
