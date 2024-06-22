@@ -76,11 +76,11 @@ module.exports = {
         },
         "bounce-x": {
           "0%, 100%": {
-            transform: "translateX(-5%)",
+            transform: "translateX(0%)",
             animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
           },
           "50%": {
-            transform: "translateX(5%)",
+            transform: "translateX(0%)",
             animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
           },
         },

@@ -66,6 +66,7 @@ export const parseArrayAnswerInt = (
   return stringArray;
 };
 
+
 export const cleanAndParseString = (inputString: string) => {
   try {
     // Remove \n and \t escapes from the string

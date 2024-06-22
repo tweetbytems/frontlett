@@ -52,7 +52,7 @@ const Testimonial: FC = () => {
 
   return (
     <MaxWidth className="w-11/12 mr-60 mb-28">
-      <div className="block md:flex justify-around items-start gap-0 my-20 mb-64 ml-2">
+      <div className="block md:flex justify-around items-start gap-0 my-20 mb-64 ">
         <div className="w-96 mx-auto md:mx-0">
           <div className="flex justify-center items-center">
             <div className="flex-grow flex justify-center">
@@ -81,14 +81,15 @@ const Testimonial: FC = () => {
               Are you too? Please give your assessment
             </p>
             <br />
-            <div className="mx-auto mb-10 md:mx-0 border-[1px]  border-edu-yellow w-[20rem] rounded-[2.5rem] ">
-              <Link to="#">
-                <button className="p-4 text-edu-yellow">
-                  Write your assessment{" "}
-                </button>
+            <div className="mx-auto mb-10 md:mx-0 border-[1px]  border-edu-yellow w-[20rem] rounded-[2.5rem] hover:border-amber-400 ">
+              <Link to="#" className=" hover:no-underline">
+                <h3 className="p-4 text-edu-yellow inline  hover:text-amber-400">
+                  Write your assessment
+                </h3>
                 <FaArrowRight
-                  className="ml-7 inline-block text-edu-yellow border-[1px] 
-               border-edu-yellow h-14 w-20 p-4 rounded-[2.5rem] animate-bounce-x"
+                  className="ml-7 inline-block 
+                  bg-white text-edu-yellow border-[1px] 
+               border-edu-yellow h-14 w-20 p-4 rounded-[2.5rem] animate-bounce-x "
                 />{" "}
               </Link>
             </div>
