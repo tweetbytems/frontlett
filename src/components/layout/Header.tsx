@@ -28,7 +28,7 @@ const HEADERLINKS: HeaderLinkTypes[] = [
   },
   {
     name: "Contact us",
-    link: "#",
+    link: "/contact-us",
   },
 ];
 
