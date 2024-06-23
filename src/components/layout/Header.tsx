@@ -76,9 +76,13 @@ const Header = () => {
             <Button variant="white" onClick={() => navigate("/login")}>
               Log in
             </Button>
-            <Button variant="blue" onClick={() => navigate("/signup")}>
+            <Button variant="blue" 
+            
+            text=" 
               Sign up
-            </Button>
+            
+            "
+            onClick={() => navigate("/signup")}>
           </ul>
         </MaxWidth>
       </nav>
