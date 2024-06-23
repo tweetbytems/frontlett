@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Error404 from "./pages/Error404";
+import ContactUs from "./pages/ContactUs";
 
 // Auth
 import Login from "./pages/Auth/Login";
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
           {
             path: "/terms-and-conditions",
             element: <TermsAndConditions />,
+          },
+          {
+            path: "/contact-us",
+            element: <ContactUs />,
           },
         ],
       },
