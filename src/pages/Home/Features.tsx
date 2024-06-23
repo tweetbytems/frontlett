@@ -66,9 +66,13 @@ const FeaturesData = [
 
 const Features = () => {
   return (
-    <section className="my-10 text-center">
+    <section
+      data-aos="fade-up"
+      data-aos-offset="200"
+      className="my-10 text-center"
+    >
       <MaxWidth>
-        <h2 className="font-semibold md:text-3xl text-2xl text-blue-800">
+        <h2 className="font-semibold md:text-3xl text-2xl text-edu-blue">
           Features
         </h2>
         <h5 className="text-base md:w-[45%] w-[90%] mx-auto font-light text-gray-500 mt-6 mb-20">

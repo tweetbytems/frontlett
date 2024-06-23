@@ -14,7 +14,7 @@ const FooterLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 py-16 text-white/50 text-center mt-20">
+    <footer className="bg-edu-blue py-16 text-white/50 text-center mt-20">
       <MaxWidth className="max-w-[30rem]">
         {/*SUB:  TOP */}
         <div className="flex items-center justify-center md:gap-10 gap-5">
@@ -41,7 +41,7 @@ const Footer = () => {
               name="newNewsletter"
               className="flex-1 px-4 border border-white/50 rounded-md bg-transparent text-white outline-none min-h-12"
             />
-            <Button variant="blue" className="bg-blue-700 inline-flex ">
+            <Button variant="blue" className="bg-edu-blue inline-flex ">
               Sign up
             </Button>
           </div>

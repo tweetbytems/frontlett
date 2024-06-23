@@ -15,9 +15,14 @@ const Hero = () => {
     <section className="hero">
       <MaxWidth className="flex gap-x-16 md:flex-row flex-col md:pt-32 pt-12">
         {/* SUB: TEXT SECTION */}
-        <div className="md:w-1/2 text-center md:text-left">
+        <div
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-duration="3000"
+          className="md:w-1/2 text-center md:text-left"
+        >
           <h1 className="font-semibold md:text-5xl text-4xl [word-spacing:5px] text-edu-yellow md:leading-[4rem] leading-[2.5rem]">
-            <span className="text-blue-800">Your Gateway to</span> Smart
+            <span className="text-edu-blue">Your Gateway to</span> Smart
             Education
           </h1>
           <p className="w-[85%] my-10 text-lg opacity-65 font-light">
@@ -34,7 +39,11 @@ const Hero = () => {
         </div>
 
         {/* SUB: IMAGE SECTION */}
-        <div className="relative md:-top-20 ">
+        <div
+          data-aos="fade-left"
+          data-aos-offset="200"
+          className="relative md:-top-20 "
+        >
           <img
             src={topLeft}
             alt="topLeft"

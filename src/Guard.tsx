@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 
 import { getUserById } from "./services/UserServices";
-import { useAuth } from "./services/AuthContext";
+import { useAuth } from "./context/AuthContext";
 
 interface GuardProps {
   children: React.ReactNode;

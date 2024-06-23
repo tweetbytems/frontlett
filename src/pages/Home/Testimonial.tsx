@@ -52,8 +52,12 @@ const Testimonial: FC = () => {
 
   return (
     <MaxWidth className="w-11/12 mr-60 mb-28">
-      <div className="block md:flex justify-around items-start gap-0 my-20 mb-64 ">
-        <div className="w-96 mx-auto md:mx-0">
+      <div className="block md:flex justify-around items-start gap-0 my-20 mb-64">
+        <div
+          className="w-96 mx-auto md:mx-0"
+          data-aos="fade-right"
+          data-aos-offset="200"
+        >
           <div className="flex justify-center items-center">
             <div className="flex-grow flex justify-center">
               <div className="bg-[#525596] w-full h-[0.15rem] border-[0.75px]"></div>
@@ -95,10 +99,11 @@ const Testimonial: FC = () => {
             </div>
           </div>
         </div>
-        <div className="relative ">
+
+        <div data-aos="fade-left" data-aos-offset="200" className="relative ">
           <img
             src={selectedTestimonial.image1}
-            className="w-80 mx-auto md:mx-0"
+            className=" w-80 md:w-60 lg:80 mx-4 sm:mx-auto md:mx-0"
             alt="Testimonial"
           />
           <button onClick={handleNext}>

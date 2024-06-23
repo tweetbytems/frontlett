@@ -1,13 +1,12 @@
-import React from "react";
 import { Input } from "../components/thirdparty/input";
 import Button from "../components/Button";
 import { Textarea } from "../components/thirdparty/textarea";
 
 const ContactUs = () => {
   return (
-    <div className="w-full p-5 md:px-16 md:py-10 mt-20 grid md:grid-cols-2 gap-4">
+    <div className="md:w-full p-5 md:px-16 md:py-10 mt-8 grid md:grid-cols-2 gap-4 sm:w-[70%] mx-auto">
       {/* text */}
-      <div className="text-center md:text-left text-edu-gray md:p-5">
+      <div className=" md:text-left text-edu-gray md:p-5">
         <h1 className="font-bold text-4xl text-edu-blue [word-spacing:5px] md:leading-[4rem] leading-[2.5rem]">
           Contact Us
         </h1>
@@ -35,9 +34,9 @@ const ContactUs = () => {
       </div>
 
       {/* contact form */}
-      <div className=" flex justify-end ">
-        <form className="w-[70%]">
-          <div className=" flex flex-col gap-5 bg-white rounded-lg shadow-2xl p-2 sm:p-10">
+      <div className=" flex justify-end  ">
+        <form className="w-full lg:w-[70%]">
+          <div className=" flex flex-col gap-5 bg-white rounded-lg sm:shadow-2xl p-6 sm:p-10">
             <div className="grid md:grid-cols-2 gap-8 ">
               <Input
                 id="firstname"

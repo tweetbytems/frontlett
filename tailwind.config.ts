@@ -30,7 +30,6 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         "edu-blue": "#0249B2",
         "edu-yellow": "#FCD803",
-        "edu-gray": "#464646",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -77,11 +76,11 @@ module.exports = {
         },
         "bounce-x": {
           "0%, 100%": {
-            transform: "translateX(0%)",
+            transform: "translateX(-25%)",
             animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
           },
           "50%": {
-            transform: "translateX(0%)",
+            transform: "translateX(25%)",
             animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
           },
         },

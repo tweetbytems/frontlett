@@ -50,7 +50,11 @@ const Faq: FC = () => {
   };
 
   return (
-    <div className="my-24 flex justify-center items-center text-center cursor-pointer">
+    <div
+      data-aos="fade-up"
+      data-aos-offset="200"
+      className="my-24 flex justify-center items-center text-center cursor-pointer"
+    >
       <MaxWidth className="md:w-7/12">
         <h1 className="text-edu-blue font-bold text-2xl md:text-3xl mb-2">
           FAQs
