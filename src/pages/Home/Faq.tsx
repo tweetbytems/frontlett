@@ -51,6 +51,7 @@ const Faq: FC = () => {
 
   return (
     <div
+      id="contact-us"
       data-aos="fade-up"
       data-aos-offset="200"
       className="my-24 flex justify-center items-center text-center cursor-pointer"

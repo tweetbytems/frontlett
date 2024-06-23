@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
+import { Link as ScrollLink } from "react-scroll";
 
 import Button from "../Button";
 import MaxWidth from "./MaxWidth";
@@ -64,14 +65,31 @@ const Header = () => {
             )}
           >
             {HEADERLINKS.map((link: HeaderLinkTypes) => (
-              <li key={link.name}>
-                <NavLink
-                  to={link.link}
-                  className="px-2 py-2 inline-flex w-full"
-                >
-                  {link.name}
-                </NavLink>
-              </li>
+              <>
+                {link.name === "FAQs" ? (
+                  <ScrollLink
+                    to="contact-us"
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-250}
+                    duration={1000}
+                    className="cursor-pointer"
+                    key={link.name}
+                  >
+                    {link.name}
+                  </ScrollLink>
+                ) : (
+                  <li key={link.name}>
+                    <NavLink
+                      to={link.link}
+                      className="px-2 py-2 inline-flex w-full"
+                    >
+                      {link.name}
+                    </NavLink>
+                  </li>
+                )}
+              </>
             ))}
             <Button variant="white" onClick={() => navigate("/login")}>
               Log in
