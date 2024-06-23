@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import { Input } from "../../components/thirdparty/input";
 import Button from "../../components/Button";
 import GoogleButton from "../../components/GoogleButton";
-import MaxWidth from "../../components/layout/MaxWidth";
 
 const Login = () => {
   return (
-    <div className="flex flex-col justify-center bg-white sm:shadow-2xl px-6 md:px-12 py-10  space-y-3 md:mt-6 rounded-sm ">
+    <div className="flex flex-col justify-center bg-white sm:shadow-2xl px-12 py-10 space-y-3 mt-6 sm:mx-32 md:mx-0 rounded-sm ">
       <>
         <h3 className="text-sm">
           Dont have an account?{" "}

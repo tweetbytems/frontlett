@@ -1,6 +1,7 @@
-import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-import MaxWidth from "../../components/utils/MaxWidth";
 import React, { useState, FC } from "react";
+import { SlArrowDown, SlArrowUp } from "react-icons/sl";
+
+import MaxWidth from "../../components/layout/MaxWidth";
 
 interface FAQ {
   id: number;
@@ -42,7 +43,7 @@ const FAQLists: FAQ[] = [
 ];
 
 const Faq: FC = () => {
-  const [activeFaq, setActiveFaq] = (useState < number) | (null > null);
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const handleClick = (id: number) => {
     setActiveFaq(activeFaq === id ? null : id);
@@ -69,18 +70,14 @@ const Faq: FC = () => {
                    text-gray-100 bg-edu-blue p-4 md:p-6 cursor-pointer"
                 >
                   <h1 className="text-sm md:text-xl">{faq.question}</h1>
-                  <span>
-                    <button>
-                      {isActive ? <SlArrowUp /> : <SlArrowDown />}
-                    </button>
-                  </span>
+                  <span>{isActive ? <SlArrowUp /> : <SlArrowDown />}</span>
                 </div>
                 <div
-                  className={`overflow-hidden transition-max-height duration-300 ease-in-out ${
+                  className={`overflow-hidden transition-max-height  duration-500 ease-in-out ${
                     isActive ? "max-h-screen" : "max-h-0"
                   }`}
                 >
-                  <p className="bg-gray-400 p-6 text-start text-gray-700">
+                  <p className="bg-blue-50 p-6 text-start text-gray-700">
                     {faq.answer}
                   </p>
                 </div>
