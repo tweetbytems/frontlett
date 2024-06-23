@@ -59,8 +59,8 @@ const Header = () => {
           </button>
           <ul
             className={twMerge(
-              "absolute right-0  -top-[100vh] bg-zinc-100 md:bg-transparent py-10 px-5 md:p-0 flex flex-col md:flex-row gap-x-5 gap-y-4 md:static  md:items-center w-full z-[50] md:w-auto  transition-all duration-500 ease-linear",
-              showMenu && "top-[100%] transition-all duration-500"
+              "absolute right-0  -top-[100vh] bg-zinc-100 md:bg-transparent py-10 px-5 md:p-0 flex flex-col md:flex-row gap-x-5 gap-y-4 md:static  md:items-center w-full z-[50] md:w-auto  transition-all duration-1000 ease-linear",
+              showMenu && "top-[100%] transition-all duration-1000"
             )}
           >
             {HEADERLINKS.map((link: HeaderLinkTypes) => (
