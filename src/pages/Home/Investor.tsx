@@ -191,7 +191,7 @@ const Investor = () => {
             button,
             workText,
           }) => (
-            <div className="relative border-solid border-l-0 border-2 border-black/20 last:border-r-0 border-b-0 md:border-b-1   p-4 ">
+            <div className="relative border-solid border-l-0 border-2 border-black/20 last:border-r-0 border-b-0 md:border-b-2   p-4 ">
               <h5 className="font-semibold text-sm pb-2 ">{heading}</h5>
               <li>
                 {one}
@@ -209,7 +209,7 @@ const Investor = () => {
               </li>
               <span
                 className={cn(
-                  "text-white last:absolute right-34 bottom-4 h-28 w-60  p-4 hidden lg:block",
+                  "text-white absolute right-34 top-2 h-28 w-60  p-4 hidden lg:block",
                   bg
                 )}
               >

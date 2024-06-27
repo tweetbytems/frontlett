@@ -48,7 +48,7 @@ const Equity = () => {
         See companies and startups offering equity or a mix of cash and equity
         for very important position in their company
       </h5>
-      <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
+      <div className="flex flex-wrap md:flex-nowrap justify-center gap-x-8 gap-y-4">
         {EquityData.map(({ src, heading, subheading, role }) => (
           <EquityCard
             src={src}
