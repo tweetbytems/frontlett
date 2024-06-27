@@ -7,7 +7,7 @@
 
   @layer base {
     :root {
-      --background: 0 0% 100%;
+      --background: 0 0% 96%;
       --foreground: 222.2 84% 4.9%;
 
       --card: 0 0% 100%;
@@ -69,6 +69,11 @@
     }
   }
 
+
+  .body {
+    background-color: #F9F9F9
+  }
+
   @layer base {
     * {
       @apply border-border;
@@ -79,18 +84,14 @@
   }
 
   a {
-  @apply text-edu-blue  hover:underline underline-offset-4;
+  @apply text-sinc-black  hover:underline underline-offset-4;
 }
 
 .no-scroll {
   overflow: hidden !important;
 }
 
-.hero {
-  background: #80808015;
-  clip-path: ellipse(100% 55% at 48% 44%);
-  overflow: hidden;
-}
+
 
 
 @keyframes bounce-x {
@@ -101,5 +102,58 @@
   50% {
     transform: translateX(25%);
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+
+
+
+
+/* reset */
+button,
+h3 {
+  all: unset;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+	.swiper-pagination-bullet {
+	background-color: #000000;
+	width: 0.5rem;
+	height:0.5rem;
+}
+
+.swiper-custom-pagination {
+	margin-top: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #2A286A !important;
+}
+
+.swiper-button-prev, .swiper-button-next{
+	background: #F8F8F8;
+	border-radius: 50%;
+	height: 1.2rem !important;
+		width: 1.2rem !important;
+	border: 2px solid #2A286A;
+	color: #2A286A !important;
+	top: var(--swiper-navigation-top-offset, 90%) !important;
+	
+	@media screen and (min-width: 540px) {	
+		height: 2.2rem !important;
+		width: 2.2rem !important;
+		top: var(--swiper-navigation-top-offset, 85%) !important;
+	  }
+}
+
+
+@layer utilities {
+  .backdrop-blur {
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px); /* For Safari */
   }
 }

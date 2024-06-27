@@ -1,15 +1,31 @@
-import Features from "./Features";
 import Hero from "./Hero";
-import Faq from "./Faq";
-import Testimonial from "./Testimonial";
+import Network from "./Network";
+import Focus from "./Focus";
+import Concept from "./Concept";
+import Service from "./Service";
+import Portfolio from "./Portfolio";
+import Cofound from "./Cofound";
+import Join from "./Join";
+import Investor from "./Investor";
+import Equity from "./Equity";
+import Blog from "./Blog";
+import Featured from "./Featured";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <Features />
-      <Faq />
-      <Testimonial />
+      <Network />
+      <Focus />
+      <Concept />
+      <Service />
+      <Portfolio />
+      <Cofound />
+      <Join />
+      <Investor />
+      <Equity />
+      <Blog />
+      <Featured />
     </>
   );
 };
