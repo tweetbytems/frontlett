@@ -58,7 +58,7 @@ const Service = () => {
         </div>
 
         {/* <FeaturesCard /> */}
-        <div className="flex  justify-between flex-wrap gap-x-12  gap-y-20 ">
+        <div className="flex  justify-center flex-wrap gap-x-12  gap-y-20 ">
           {FeaturesData.map((feature, index) => (
             <FeaturesCard
               key={index}

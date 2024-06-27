@@ -77,10 +77,12 @@ export const HeroCard = ({
         className=" mx-auto
       items-center mt-8 md:pl-24 md:text-left text-center md:1/2 lg:w-1/3 h-[16rem] "
       >
-        <h1 className="font-semibold md:text-4xl  text-xl   md:leading-[3rem] leading-[2.5rem]">
+        <h1 className="font-semibold md:text-4xl  text-xl   md:leading-[3rem] leading-[1.8rem]">
           {heading}
         </h1>
-        <p className=" mt-4 mb-8 text-sm text-[#4E4E4E]">{subheading}</p>
+        <p className=" my:3 md:mt-4 md:mb-8 text-sm text-[#4E4E4E]">
+          {subheading}
+        </p>
         <ul className="pb-4 text-sm">
           <li>{one}</li>
           <li>{two}</li>

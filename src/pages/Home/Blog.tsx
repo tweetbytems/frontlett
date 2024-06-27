@@ -41,8 +41,12 @@ const Blog = () => {
       </h2>
       <div className="flex flex-wrap sm:flex-nowrap">
         {blogData.map(({ src, heading, subheading, miniImg }) => (
+          <BlogCard src={src} />
+        ))}
+      </div>
+      <div className="flex flex-wrap sm:flex-nowrap">
+        {blogData.map(({ src, heading, subheading, miniImg }) => (
           <BlogCard
-            src={src}
             heading={heading}
             subheading={subheading}
             miniImg={miniImg}
@@ -57,10 +61,10 @@ const Blog = () => {
 export default Blog;
 
 interface BlogCardProps {
-  src: string;
-  heading: string;
-  subheading: string;
-  miniImg: string;
+  src?: string;
+  heading?: string;
+  subheading?: string;
+  miniImg?: string;
 }
 export const BlogCard = ({
   src,
@@ -71,13 +75,13 @@ export const BlogCard = ({
   return (
     <div
       className="
-   px-5  pt-2 pb-10 max-w-80 mx-auto
+   px-5  pt-2 pb-2 max-w-80 mx-auto
     "
     >
       <div>
         <img src={src} alt="" />
       </div>
-      <div className="flex gap-1 mt-8">
+      <div className="flex gap-1 ">
         <span className=" text-xs">
           <h5 className="font-semibold pb-2">{heading}</h5>
           <p>{subheading}</p>
