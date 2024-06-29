@@ -74,16 +74,18 @@ export const HeroCard = ({
   return (
     // <MaxWidth className=" md:w-full m-0 ">
     <div className="md:flex justify-between ">
-      <div className="flex flex-col justify-start items-start max-w-[80%] md:max-w-[60%] mx-auto text-left mt-8 md:pl-24 md:1/2 mr-4 md:mr-0 lg:w-1/3 h-[16rem] ">
-        <h1 className="font-semibold md:text-4xl  text-xl   md:leading-[3rem] leading-[1.8rem] lg:mt-[10rem]">
-          {heading}
-        </h1>
-        <p className=" mt:3 md:mt-4  text-sm text-[#4E4E4E]">{subheading}</p>
-        <ul className="py-2 md:py-4 text-sm md:mb-2">
-          <li>{one}</li>
-          <li>{two}</li>
-          <li>{three}</li>
-        </ul>
+      <div className="flex flex-col justify-center md:justify-start items-start max-w-[80%] md:max-w-[60%] mx-auto md:mx-0 text-left md:pl-20 md:1/2 mr-4 md:mr-0 lg:w-1/3 h-[16rem] ">
+        <div>
+          <h1 className="font-semibold md:text-4xl  text-xl   md:leading-[3rem] leading-[1.8rem] lg:mt-[2rem]">
+            {heading}
+          </h1>
+          <p className=" mt:3 md:mt-4  text-sm text-[#4E4E4E]">{subheading}</p>
+          <ul className="py-2 md:py-4 text-sm md:mb-2">
+            <li>{one}</li>
+            <li>{two}</li>
+            <li>{three}</li>
+          </ul>
+        </div>
 
         <div>
           <Button
