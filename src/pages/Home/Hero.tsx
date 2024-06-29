@@ -76,27 +76,29 @@ export const HeroCard = ({
   return (
     // <MaxWidth className=" md:w-full m-0 ">
     <div className="md:flex justify-between ">
-      <div className="flex flex-col justify-center md:justify-start items-start max-w-[80%] md:max-w-[60%] mx-auto md:mx-0 text-left md:pl-20 md:1/2 mr-4 md:mr-0 lg:w-1/3 h-[16rem] ">
-        <div>
+      <div className="flex flex-col justify-center md:justify-start items-start max-w-[80%] md:max-w-[60%] mx-auto md:mx-0 text-left md:pl-20 md:1/2 mr-4 md:mr-0 lg:w-1/3 h-[24rem]  ">
+        <div className="flex flex-col gap-4 md:gap-1 ">
           <h1 className="font-semibold md:text-4xl  text-xl   md:leading-[3rem] leading-[1.8rem] lg:mt-[2rem]">
             {heading}
           </h1>
-          <p className=" mt:3 md:mt-4  text-sm text-[#4E4E4E]">{subheading}</p>
-          <ul className="py-2 md:py-4 text-sm md:mb-2">
+          <p className=" mt:3 md:mt-4  text-sm md:text-lg text-[#4E4E4E]">
+            {subheading}
+          </p>
+          <ul className=" md:py-4   text-sm md:text-lg md:mb-2">
             <li>{one}</li>
             <li>{two}</li>
             <li>{three}</li>
           </ul>
-        </div>
 
-        <div>
-          <Button
-            variant="blue"
-            className="py-2 px-4 md:px-6 text-xs md:text-lg  "
-            onClick={() => navigate("/login")}
-          >
-            Sinc With Us
-          </Button>
+          <div>
+            <Button
+              variant="blue"
+              className="px-4 md:px-6 text-xs md:text-lg  "
+              onClick={() => navigate("/login")}
+            >
+              Sinc With Us
+            </Button>
+          </div>
         </div>
       </div>
       <div className="relative hidden md:block ">

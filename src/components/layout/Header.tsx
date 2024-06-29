@@ -78,7 +78,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-[200]">
       <nav className="n bg-[#F9F9F9] py-4 relative z-[200] font-semibold text-lg">
-        <MaxWidth className="flex items-center justify-between">
+        <MaxWidth className="flex items-start justify-between max-w-[85%] ">
           <div className="flex">
             <Link to="/" className="flex items-center w-32">
               {/* Adjusted logo structure */}
