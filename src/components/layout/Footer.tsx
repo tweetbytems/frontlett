@@ -24,22 +24,22 @@ const Footer = () => {
       <MaxWidth className="max-w-[80rem] mb-8">
         {/*SUB:  TOP */}
 
-        <div className="md:max-w-[35%] flex flex-col mt-4 gap-y-4">
+        <div className=" md:max-w-[35%] flex flex-col mt-4 gap-y-4">
           <h5 className="font-semibold lg:text-4xl"> Newsletter</h5>
           <p className="text-sm">
             Get the latest about SINC Partners, our startup Incubator program,
             Portfolio company offerings - straight into your inbox.
           </p>
-          <div className="flex justify-center gap-4 border-[1px] rounded-full mt-6">
+          <div className="relative flex justify-end  border-[1px] rounded-full mt-6">
             <input
               type="text"
-              placeholder="Enter your email address"
+              placeholder="Enter email address"
               name="newNewsletter"
-              className="flex-1 px-4 border-none bg-transparent text-white outline-none min-h-12"
+              className="absolute flex-1 px-4 left-1 border-none bg-transparent text-white outline-none min-h-12"
             />
             <Button
               variant="white"
-              className="bg-[white] text-black font-semibold inline-flex rounded-full "
+              className="bg-[white]  text-black font-semibold inline-flex rounded-full "
             >
               Subscribe
             </Button>

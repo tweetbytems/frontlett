@@ -1,4 +1,5 @@
 // import React from "react";
+import Button from "../../components/Button";
 
 import MaxWidth from "../../components/layout/MaxWidth";
 import FeaturesCard from "../../components/cards/FeaturesCard";
@@ -22,11 +23,11 @@ const FeaturesData = [
 
 const Netwoork = () => {
   return (
-    <section data-aos="fade-up" data-aos-offset="200" className="my-24 ">
+    <section className="my-24 ">
       <MaxWidth>
         <div className="flex justify-center my-24">
           <FeaturesCard
-            classname="md:w-[65%] pt-6"
+            classname="w-[90%] md:w-[65%] pt-6 text-center"
             heading={
               "Nigeria and Africa has a massive network effect that have not be fully utilized. With Nigerians/Africans in every country and territory of the world, we can scale an African business to 100+ countries in few weeks"
             }
@@ -36,23 +37,38 @@ const Netwoork = () => {
           />
         </div>
 
-        <h2 className="font-semibold md:text-5xl text-xl text-center  md:w-[65%]  mx-auto mb-10">
-          Network of builders helping startup scale
-        </h2>
-
-        {/* <FeaturesCard /> */}
-        <div className="flex justify-center flex-wrap gap-x-12  gap-y-20 ">
-          {FeaturesData.map((feature, index) => (
-            <FeaturesCard
-              classname="w-[35%] pt-4 min-w-64"
-              key={index}
-              heading={feature.heading}
-              subheading={feature.subheading}
-              paragraph={feature.paragraph}
-              link={true}
-              img={false}
-            />
-          ))}
+        <div data-aos="fade-up" data-aos-offset="200">
+          <h2 className="font-semibold md:text-5xl text-xl text-center  md:w-[65%]  mx-auto mb-10">
+            Network of builders helping startup scale
+          </h2>
+          <div className=" sm:hidden flex flex-col gap-3 justify-center">
+            <p className="text-center">
+              "Nigeria and Africa has a massive network effect that have not be
+              fully utilized. With Nigerians/Africans in every country and
+              territory of the world, we can scale an African business to 100+
+              countries in few weeks"
+            </p>
+            <Button
+              variant="blue"
+              className=" mx-auto w-24 py-2 px-3 md:px-6 text-xs md:text-lg  "
+            >
+              Read About Us
+            </Button>
+          </div>
+          {/* <FeaturesCard /> */}
+          <div className="hidden sm:flex justify-center flex-wrap gap-x-12  gap-y-20 ">
+            {FeaturesData.map((feature, index) => (
+              <FeaturesCard
+                classname="max-w-[60%] pt-4 min-w-64"
+                key={index}
+                heading={feature.heading}
+                subheading={feature.subheading}
+                paragraph={feature.paragraph}
+                link={true}
+                img={false}
+              />
+            ))}
+          </div>
         </div>
       </MaxWidth>
     </section>

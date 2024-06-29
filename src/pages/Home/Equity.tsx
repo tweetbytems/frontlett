@@ -6,6 +6,7 @@ import Equity2 from "../../assets/images/Equity/Equity2.png";
 import Equity3 from "../../assets/images/Equity/Equity3.png";
 import Equity4 from "../../assets/images/Equity/Equity4.png";
 import Button from "../../components/Button";
+import { cn } from "../../utils/utils";
 
 const EquityData = [
   {
@@ -40,7 +41,7 @@ const EquityData = [
 
 const Equity = () => {
   return (
-    <div className="max-w-[80%] mx-[auto] my-24">
+    <div className="max-w-[80%] mx-[auto] my-24 ">
       <h2 className="font-semibold md:text-5xl  text-xl text-center  md:w-[65%]  mx-auto mb-10">
         Equity jobs
       </h2>
@@ -48,16 +49,34 @@ const Equity = () => {
         See companies and startups offering equity or a mix of cash and equity
         for very important position in their company
       </h5>
-      <div className="flex flex-wrap md:flex-nowrap justify-center gap-x-8 gap-y-4">
-        {EquityData.map(({ src, heading, subheading, role }) => (
-          <EquityCard
-            src={src}
-            heading={heading}
-            subheading={subheading}
-            role={role}
-          />
+      <div className="flex justify-center gap-8 flex-wrap ">
+        {EquityData.map(({ src, heading, subheading, role }, index) => (
+          <div key={index} className="flex justify-center">
+            {/* Render only the first item on small devices */}
+            {index === 0 && (
+              <EquityCard
+                src={src}
+                heading={heading}
+                subheading={subheading}
+                role={role}
+              />
+            )}
+
+            {/* Render all items on medium and larger devices */}
+            {index !== 0 && (
+              <div className="hidden sm:flex justify-center">
+                <EquityCard
+                  src={src}
+                  heading={heading}
+                  subheading={subheading}
+                  role={role}
+                />
+              </div>
+            )}
+          </div>
         ))}
       </div>
+
       <OuterLink outerLinkText="See More Equitys & Resources" />
     </div>
   );

@@ -101,7 +101,7 @@ const Join = () => {
     ],
   };
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <h2 className="font-semibold md:text-5xl text-xl text-center  md:w-[65%]  mx-auto mb-10">
         How It Works
       </h2>

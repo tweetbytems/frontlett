@@ -58,7 +58,7 @@ const Service = () => {
         </div>
 
         {/* <FeaturesCard /> */}
-        <div className="flex  justify-between flex-wrap gap-x-12  gap-y-20 ">
+        <div className="flex  justify-center flex-wrap gap-x-4 gap-y-8 ">
           {FeaturesData.map((feature, index) => (
             <FeaturesCard
               key={index}
@@ -71,7 +71,9 @@ const Service = () => {
         </div>
 
         <div className="">
-          <h2 className="font-semibold mt-6 text-lg">Case Study</h2>
+          <h2 className="font-semibold mt-6 text-lg text-center md:text-left">
+            Case Study
+          </h2>
           <h5 className=" text-[#4E4E4E] mt-2 mb-20">
             See what Service Incubators get, the maths behind Service Equity
             (SEEQ) and what the value of your share equity can be over time

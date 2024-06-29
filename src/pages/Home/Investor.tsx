@@ -106,7 +106,7 @@ const investorData2 = [
     workText:
       "Work with Service Incubators (SINC) to expedite your time to market",
     button: (
-      <Button variant="blue" className="text-sm">
+      <Button variant="blue" className="px-4 text-sm">
         Join SINC Network
       </Button>
     ),
@@ -148,7 +148,7 @@ const Investor = () => {
             threeBold,
             fourBold,
           }) => (
-            <div className="border-solid border-l-0 border-2 border-black/20 md:last:border-r-0 p-4 ">
+            <div className="border-solid border-l-0 border-2 border-black/20 md:last:border-r-0 border-r-0 md:border-r-[1px]  p-4 ">
               <h5 className="font-semibold text-sm pb-2 ">{heading}</h5>
               <li>
                 {one}
@@ -171,7 +171,7 @@ const Investor = () => {
 
       <h5 className="my-4">
         <span className="font-semibold ">
-          Angel Investors & Venture Capital
+          Angel Investors & Venture Capital{" "}
         </span>
         (Invest from $50k and above)
       </h5>
@@ -191,7 +191,7 @@ const Investor = () => {
             button,
             workText,
           }) => (
-            <div className="relative border-solid border-l-0 border-2 border-black/20 last:border-r-0 border-b-0 md:border-b-2   p-4 ">
+            <div className="relative border-solid border-l-0 border-2 border-black/20 border-r-0 md:border-r-[1px]   last:border-r-0 border-b-0 md:border-b-2   p-4 ">
               <h5 className="font-semibold text-sm pb-2 ">{heading}</h5>
               <li>
                 {one}
@@ -209,7 +209,7 @@ const Investor = () => {
               </li>
               <span
                 className={cn(
-                  "text-white absolute right-34 top-2 h-28 w-60  p-4 hidden lg:block",
+                  "text-white absolute right-34 top-2 max-h-[90%] max-w-[90%]  p-4 hidden sm:block",
                   bg
                 )}
               >
@@ -219,6 +219,15 @@ const Investor = () => {
             </div>
           )
         )}
+        <div className="block sm:hidden bg-black text-white p-5">
+          <h5 className="mb-4">
+            "Work with Service Incubators (SINC) to expedite your
+            time to market",
+          </h5>
+          <Button variant="blue" className=" text-sm">
+            Join SINC Network
+          </Button>
+        </div>
       </ul>
     </div>
   );
