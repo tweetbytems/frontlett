@@ -51,17 +51,19 @@ const Focus = () => {
           initial strategic direction to focus on these five (5) key areas at
           the lab
         </h5>
-        {focusData.map(({ bg, heading, subheading }) => (
-          <div
-            className={cn(
-              "flex flex-col justify-between w-full lg:min-w-44 min-h-24 p-3  text-[white]",
-              bg
-            )}
-          >
-            <h1 className="text-left text-sm">{heading}</h1>
-            <h3 className="text-sm text-left">{subheading}</h3>
-          </div>
-        ))}
+        <div className="flex flex-wrap md:flex-nowrap">
+          {focusData.map(({ bg, heading, subheading }) => (
+            <div
+              className={cn(
+                "flex flex-col justify-between w-full lg:min-w-44 min-h-24 p-3  text-[white]",
+                bg
+              )}
+            >
+              <h1 className="text-left text-sm">{heading}</h1>
+              <h3 className="text-sm text-left">{subheading}</h3>
+            </div>
+          ))}
+        </div>
       </div>
     </MaxWidth>
   );
