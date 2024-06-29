@@ -158,15 +158,14 @@ h3 {
   }
 }
 .body{
-  overflow-x: hidden ;
+  overflow: hidden ;
 }
 
 
 .slick-dots {
-  /* position: absolute; */
-  /* bottom: -2px !important; */
-  /* z-index: ; */
+  position: absolute;
+  bottom: -2px !important;
 }
-/* .slick-dots li button:before {
- !important;
-} */
+ .slick-dots li button:before {
+font-size: 10px;
+} 

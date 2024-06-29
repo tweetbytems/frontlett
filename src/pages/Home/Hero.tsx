@@ -10,6 +10,8 @@ import hero2 from "../../assets/images/hero2.png";
 import hero3 from "../../assets/images/hero3.png";
 import heroPeg from "../../assets/images/heroPeg.png";
 
+import "../../../index.css";
+
 const Hero = () => {
   var settings = {
     dots: true,
